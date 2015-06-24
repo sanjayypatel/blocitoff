@@ -73,3 +73,6 @@ end
 
 # Include Twitter Bootstrap - Sass for styling
 gem 'bootstrap-sass'
+
+# Include whenever to automate rake tasks
+gem 'whenever', :require => false
