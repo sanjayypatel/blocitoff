@@ -12,7 +12,7 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <%= link_to root_path, class: 'navbar-brand' do %>
+          <%= link_to (user_signed_in? ? user_path(current_user) : root_path), class: 'navbar-brand' do %>
             <span class="glyphicon glyphicon-th-list"> Blocitoff</span>
           <% end %>
         </div>
