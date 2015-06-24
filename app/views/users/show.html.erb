@@ -1,0 +1,32 @@
+<h2><%= "#{@user.name}'s To-do List" %></h2>
+<div class="col-md-12">
+
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h1 class="panel-title">To-do's</h1>
+    </div>
+    <div class="panel-body">
+      <div class="list-items">
+        <%= render partial: 'items/item', collection: @items, locals: {user: @user} %>
+      </div>
+      <div class="new-item">
+        <%= render partial: 'items/form', locals: {user: @user} %>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h1 class="panel-title">User Info</h1>
+    </div>
+    <div class="panel-body">
+      <dl class="dl-horizontal">
+        <dt>Name</dt>
+        <dd><%= @user.name%></dd>
+        <dt>Email</dt>
+        <dd><%= @user.email %></dt>
+      </dl>
+    </div>
+  </div>
+
+</div>

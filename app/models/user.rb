@@ -5,5 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable,
          :validatable, :confirmable
 
+  has_many :items
+
   validates :name, length: {minimum: 1}
 end
