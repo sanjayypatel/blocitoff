@@ -13,7 +13,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @user.delete_expired_items
     @items = @user.items
   end
 

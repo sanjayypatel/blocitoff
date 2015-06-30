@@ -9,8 +9,4 @@ class User < ActiveRecord::Base
 
   validates :name, length: {minimum: 1}
 
-  def delete_expired_items
-    items.where("created_at <= ?", Time.now - 7.days).destroy_all
-  end
-
 end
