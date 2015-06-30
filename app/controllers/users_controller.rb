@@ -15,6 +15,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     authorize @user
     @items = @user.items
+    @new_item = Item.new
   end
 
   private
